@@ -9,8 +9,7 @@ function ListingDetailPage (){
     const pid_array = pid.split('-');
 
     const [item, setitem] = useState([]);
-    // const [pagecount,setpagecount] =useState([])
-    // const limit;
+   
    
     let postId = pid_array[(pid_array.length - 1)];
 
