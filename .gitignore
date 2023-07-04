@@ -1,5 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+//npm install react-scripts - to load all node_modules first time
+// npm start - to start a project
+// npm build - to built a project
 # dependencies
 /node_modules
 /.pnp
