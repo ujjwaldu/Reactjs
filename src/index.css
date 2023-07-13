@@ -18,8 +18,9 @@
   font-family: sans-serif;
 } */
 .navbar{
-  background-color: #fff !important;
+  /* background-color: rgb(8, 68, 8); */
 }
+
 .navbar-brand{
   font-size: 1.9rem !important;
   color: #565387 !important;
@@ -27,8 +28,10 @@
 }
 
 .navbar a {
-  font-size: 1.3rem;
-  text-transform: capitalize;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-left: 1.2rem;
+  color:white;
 }
 
 .navbar a:hover{
@@ -43,7 +46,7 @@
 #header{
     width: 100%;
     height: 80vh;
-    margin-top: 70px;
+    margin-top: 80px;
 }
 #header h1{
   margin: 0 0 10px 0;
@@ -99,4 +102,45 @@
   100%{
     transform: translateY(-10px);
   }
+}
+.image{
+ height: 2rem;
+ 
+}
+#conht {
+  /* height:1.4rem; */
+}
+
+.cardcss{
+  box-shadow: 0 0 10px grey;
+  /* margin: 1%; */
+  width: 31% !important;
+  margin: 30px 10px;
+}
+.outbox{
+  padding: 5%;
+  /* margin:; */
+  width: 100%;
+  margin: 5% 10% 5% 10%;
+  background-image: linear-gradient(to top right, rgb(3, 226, 211), rgb(3, 87, 243), rgb(164, 19, 226))
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  #conht {
+    height:2.5rem;
+  }
+  #header{
+    width: 100%;
+    /* height: 100vh; */
+    margin-top: 80px;
+}
 }

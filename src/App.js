@@ -12,6 +12,7 @@ import { Contact } from './component/Contact';
 import { Navbar } from './component/Navbar';
 import {Listing} from './component/Listing';
 import {ListingDetailPage} from './component/ListingDetailPage';
+import Login from './component/Login';
 
 export default function App() {
   return(
@@ -25,7 +26,7 @@ export default function App() {
         <Route path='contact' element={<Contact/>} />
         <Route path='/listing' element={<Listing/>} />
         <Route path='/:country/:state/:pid' element={<ListingDetailPage/>} />
-        <Route path='*' element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
      </Routes>
      </div>
     

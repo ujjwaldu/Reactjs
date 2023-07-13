@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-// import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import { useParams,NavLink,Link} from "react-router-dom";
+// import web from '../img1.jpeg'
 function Listing (){
 
     const [item, setitem] = useState([]);
@@ -19,31 +20,47 @@ function Listing (){
 
     }, []);
 
+    const Wrapper =styled.div `
+    h6{
+        font-size:12px;
+        margin:2%;
+        ${'' /* text-align:center; */}
+    }
+    h2{
+        ${'' /* text-align:center; */}
+        font-size:25px;
+        margin-left:2%;
+        margin-top:5%;
+    }
+    h5{
+        margin-top:6%;
+        font-size:18px;
+        margin-left:2%
+    }
+  `
+
     
     return (
 
-        <div className='container'>
+      <>
+        <div className="container" style={{marginTop:'2rem'}}>
             <div className="row">
-                {item.map((item1) => {
-                    var newurl = (item1.url).replace("https://www.haveinlist.com/", "/");
-                    return <div key={item1.id} className="col-md-4 v my-2 mx-0">
-                        <div className="card shadow ">
-                            <div className="card-body shadow">
-                                {/* <h5 className='card-title text-center h2'>Id : {item1.id}</h5> */}
-                             <Link to={newurl}><img src={item1.image} className="img-fluid" alt="kuh" /></Link>
-                                <h6 className='mt-1'>{item1.address}</h6>
-                                <h3 className="text-center">{item1.name}</h3>
-                                <h5>{item1.category}</h5>
-                                {/* <p className='card-text'>{item1.body}</p> */}
-                            </div>
-                        </div>
-                    </div>
-
+            {item.map((item1) => {
+                var newurl = (item1.url).replace("https://www.haveinlist.com/", "/");
+               return <div key={item1.id} className="col-md-4 cardcss">
+                <Wrapper>
+                <Link to={newurl}><img src={item1.image} className="img-fluid" alt="kuh" style={{marginTop:'4%'}} /></Link>
+                    <h6>{item1.address}</h6>
+                    <h2>{item1.name}</h2>
+                    <h5>{item1.category}</h5>
+                </Wrapper>
+                </div>
+                
                 }
-                )}
+            )}
             </div>
-
         </div>
+      </>
 
     )
 }

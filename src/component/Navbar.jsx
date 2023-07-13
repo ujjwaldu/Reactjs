@@ -8,37 +8,35 @@ const Navbar = () => {
  const putstyle=({isActive})=>{
     return{
         fontWeight:isActive?'bold':'normal',
-        borderBottom: isActive? '1px solid #565387':''
+        borderBottom: isActive? '2px solid white':'',
+        color: isActive?'white':''
     }
  }
 
     return (
         <>
-            <div className="container nav_bg">
+            <div className="container-fluid" style={{backgroundColor:'#206020'}}>
                 <div className="row">
-                    <div className="col-md-10">
+                    <div className="col-md-12">
 
 
                         <nav className="navbar navbar-expand-lg mr-0">
-                            <div className="container-fluid">
-                            {/* <div className="row">
-                                <div className="col-md-6"> */}
+                            <div className="container-fluid" id="">
+                           
                                
-                                <Link className="navbar-brand" to="#">Ujjwal's Website</Link>
+                                <img className="image" src="https://cdn.statically.io/gh/mishra-vinay/writeonimage/master/hil.png" alt="" />
                                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span className="navbar-toggler-icon"></span>
                                 </button>
-                                </div>
-                            {/* </div> */}
-                            {/* <div className="col-md-6"> */}
+                             
                                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+                                    <ul className="navbar-nav mx-auto mb-1 mb-lg-0">
                                         <li className="nav-item">
                                             <NavLink style={putstyle} className="nav-link " aria-current="page" to='/'>Home</NavLink>
                                         </li>
                                         <li className="nav-item">
                                             <NavLink style={putstyle} className="nav-link" to="/service">Services</NavLink>
-                                        </li>
+                                        </li>  
                                         <li className="nav-item">
                                             <NavLink style={putstyle} className="nav-link" to="/about">About</NavLink>
                                         </li>
@@ -48,9 +46,11 @@ const Navbar = () => {
                                         <li className="nav-item">
                                             <NavLink style={putstyle} className="nav-link" to="/listing">Listing</NavLink>
                                         </li>
-                                    </ul>
-                                    {/* </div> */}
-                                {/* </div> */}
+                                        <li className="nav-item">
+                                            <NavLink style={putstyle} className="nav-link" to="/login">Login</NavLink>
+                                        </li>
+                                      </ul>
+                                    </div>
                             </div>
                         </nav>
                     </div>
