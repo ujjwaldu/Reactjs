@@ -9,16 +9,17 @@ import {Route, Routes} from 'react-router-dom';
 import About from './component/About';
 import { Service } from './component/Service';
 import { Contact } from './component/Contact';
-import { Navbar } from './component/Navbar';
 import {Listing} from './component/Listing';
 import {ListingDetailPage} from './component/ListingDetailPage';
 import Login from './component/Login';
+import { Navbarb } from './component/Navbarb';
+import { Footerk } from './component/Footerk';
 
 export default function App() {
   return(
     
      <div>
-     <Navbar/>
+     <Navbarb/>
      <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='about' element={<About/>} />
@@ -28,6 +29,7 @@ export default function App() {
         <Route path='/:country/:state/:pid' element={<ListingDetailPage/>} />
         <Route path='/login' element={<Login/>}/>
      </Routes>
+     <Footerk/>
      </div>
     
   )
