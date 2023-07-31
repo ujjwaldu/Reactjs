@@ -25,7 +25,7 @@ export default function Login() {
   return (
         <>
             <div className="container">
-            <form className='outbox' align='center' onSubmit={savedata}>
+            <form className='outbox'  onSubmit={savedata}>
             <div className="row">
                 <div className="col-md-12">
                     login
@@ -33,31 +33,31 @@ export default function Login() {
             </div>
                 <div className="row">
                     <div className="col-md-12">
-                        <span>Name</span>
-                        <div><input onChange={hanldler} type="text" placeholder='Write your name' name='name' /></div>
+                        <span className='inspan'>Name</span>
+                        <div><input className='input' onChange={hanldler} type="text" placeholder='Write your name' name='name' /></div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-                        <span>username</span>
-                        <div><input onChange={hanldler} type="text" placeholder='Write a username' name='username' /></div>
+                        <span className='inspan'>username</span>
+                        <div><input className='input' onChange={hanldler} type="text" placeholder='Write a username' name='username' /></div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-                        <span>Email</span>
+                        <span className='inspan'>Email</span>
                         <div><input onChange={hanldler} type="email" placeholder='Write email' name='email'/></div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-                        <span>password</span>
-                        <div><input onChange={hanldler} type="password" placeholder='write password here' name='password'/></div>
+                        <span className='inspan'>password</span>
+                        <div><input className='input' onChange={hanldler} type="password" placeholder='write password here' name='password'/></div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-                       <div><input type="submit" value="login" /></div>
+                       <div><input className='input' type="submit" value="login" /></div>
                     </div>
                     {msg? <div className='alert alert-success'>{msg}</div>:''}
                 </div>
