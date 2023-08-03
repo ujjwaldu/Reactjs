@@ -1,32 +1,35 @@
-import { useState } from 'react'  //12th vdo of rajiv sir and to replace api given by mishra mama
-import axios from 'axios'
+import React, { useState } from 'react';
+import axios from 'axios';
+
 export default function Register() {
-    const [state, setstate] = useState({
-        name:'',
-        // username:'',
-        email:'',
-        password:''
-    })
-    const [msg,setmsg]=useState('')
-    const hanldler=(event)=>{
-        const {name, value}=event.target
-        setstate({...state,[name]:value})
+    const [state, setState] = useState({
+        name: '',
+        email: '',
+        password: ''
+    });
+
+    const [msg, setMsg] = useState('');
+    const [bgColor, setBgColor] = useState('');
+
+    const hanldler = (event) => {
+        const { name, value } = event.target;
+        setState({ ...state, [name]: value });
     }
 
-    const savedata=(event)=>{
+    const savedata = (event) => {
         event.preventDefault();
-        axios.post('http://35.154.52.249:5050/user/register',state) 
-        .then((response)=>{
-            if (response.status === 200) {
-                if (response.data.acknowledged) {
-                  // Handle success case
-                  console.log('Request succeeded:', response.data.acknowledged);
+        axios.post('http://35.154.52.249:5050/user/register', state)
+            .then((response) => {
+                if (response.data.acknowledged === "true") {
+                    setBgColor('orange');
+                } else {
+                    setBgColor('red');
                 }
-                console.log('Unexpected status code:', response.status);
-              }
-            // console.log(response);
-            setmsg('data sent')
-        })       
+                setMsg(response.data.message);
+            })
+            .catch((error) => {
+                console.error('Error:', error.message);
+            });
     }
 
   return (
@@ -44,12 +47,6 @@ export default function Register() {
                         <div><input className='input' onChange={hanldler} type="text" placeholder='Write your name' name='name' /></div>
                     </div>
                 </div>
-                {/* <div className="row">
-                    <div className="col-md-12 inspan">
-                        <span className=''>username</span>
-                        <div><input className='input' onChange={hanldler} type="text" placeholder='Write a username' name='username' /></div>
-                    </div>
-                </div> */}
                 <div className="row">
                     <div className="col-md-12 inspan">
                         <span className=''>Email</span>
@@ -62,11 +59,17 @@ export default function Register() {
                         <div><input className='input' onChange={hanldler} type="password" placeholder='write password here' name='password'/></div>
                     </div>
                 </div>
+                {/* <div className="row">
+                    <div className="col-md-12 inspan">
+                        <span className=''>Number</span>
+                        <div><input className='input' onChange={hanldler} type="number" placeholder='write your contact no.' name='number'/></div>
+                    </div>
+                </div> */}
                 <div className="row">
                     <div className="col-md-12">
-                       <div><input className='btnlo' type="submit" value="login" /></div>
+                       <div><input className='btnlo' type="submit" value="Register" /></div>
                     </div>
-                    {msg? <div className='alert alert-success' style={{marginTop:'1rem',backgroundColor:'orange'}}>{msg}</div>:''}
+                    {msg? <div className='alert alert-success' id='div' style={{marginTop:'1rem',backgroundColor:bgColor}}>{msg}</div>:''}
                 </div>
                 </form>
             </div>
