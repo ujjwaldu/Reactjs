@@ -14,6 +14,7 @@ import {ListingDetailPage} from './component/ListingDetailPage';
 import Login from './component/Login';
 import { Navbarb } from './component/Navbarb';
 import { Footerk } from './component/Footerk';
+import Register from './component/Register';
 
 export default function App() {
   return(
@@ -28,6 +29,7 @@ export default function App() {
         <Route path='/listing' element={<Listing/>} />
         <Route path='/:country/:state/:pid' element={<ListingDetailPage/>} />
         <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
      </Routes>
      <Footerk/>
      </div>

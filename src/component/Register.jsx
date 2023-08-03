@@ -1,9 +1,9 @@
 import { useState } from 'react'  //12th vdo of rajiv sir and to replace api given by mishra mama
 import axios from 'axios'
-export default function Login() {
+export default function Register() {
     const [state, setstate] = useState({
         name:'',
-        username:'',
+        // username:'',
         email:'',
         password:''
     })
@@ -15,9 +15,16 @@ export default function Login() {
 
     const savedata=(event)=>{
         event.preventDefault();
-        axios.post('https://www.haveinlist.com/api/register.php',state) 
-        .then((res)=>{
-            console.log(res);
+        axios.post('http://35.154.52.249:5050/user/register',state) 
+        .then((response)=>{
+            if (response.status === 200) {
+                if (response.data.acknowledged) {
+                  // Handle success case
+                  console.log('Request succeeded:', response.data.acknowledged);
+                }
+                console.log('Unexpected status code:', response.status);
+              }
+            // console.log(response);
             setmsg('data sent')
         })       
     }

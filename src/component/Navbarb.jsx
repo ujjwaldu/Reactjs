@@ -49,6 +49,9 @@ const Navbarb = () => {
                                         <li className="nav-item">
                                             <NavLink style={putstyle} className="nav-link" to="/login">Login</NavLink>
                                         </li>
+                                        <li className="nav-item">
+                                            <NavLink style={putstyle} className="nav-link" to="/register">Registration</NavLink>
+                                        </li>
                                       </ul>
                                     </div>
                             </div>
