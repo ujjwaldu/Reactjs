@@ -27,37 +27,37 @@ export default function Login() {
             <div className="container">
             <form className='outbox'  onSubmit={savedata}>
             <div className="row">
-                <div className="col-md-12">
-                    login
+                <div className="col-md-12 login">
+                    login form
                 </div>
             </div>
                 <div className="row">
-                    <div className="col-md-12">
-                        <span className='inspan'>Name</span>
+                    <div className="col-md-12 inspan">
+                        <span className=''>Name</span>
                         <div><input className='input' onChange={hanldler} type="text" placeholder='Write your name' name='name' /></div>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-12">
-                        <span className='inspan'>username</span>
+                    <div className="col-md-12 inspan">
+                        <span className=''>username</span>
                         <div><input className='input' onChange={hanldler} type="text" placeholder='Write a username' name='username' /></div>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-12">
-                        <span className='inspan'>Email</span>
-                        <div><input onChange={hanldler} type="email" placeholder='Write email' name='email'/></div>
+                    <div className="col-md-12 inspan">
+                        <span className=''>Email</span>
+                        <div><input className='input' onChange={hanldler} type="email" placeholder='Write email' name='email'/></div>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-12">
-                        <span className='inspan'>password</span>
+                    <div className="col-md-12 inspan">
+                        <span className=''>password</span>
                         <div><input className='input' onChange={hanldler} type="password" placeholder='write password here' name='password'/></div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-                       <div><input className='input' type="submit" value="login" /></div>
+                       <div><input className='btnlo' type="submit" value="login" /></div>
                     </div>
                     {msg? <div className='alert alert-success'>{msg}</div>:''}
                 </div>

@@ -117,17 +117,44 @@
   width: 31% !important;
   margin: 30px 10px;
 }
+.login{
+  font-size: 40px;
+  text-align: center;
+  text-transform: capitalize;
+}
 .outbox{
-  padding: 5%;
+  padding: 5% 10% 5% 10%;
   /* margin:; */
   width: 50%;
   margin: 5% 10% 5% 30%;
   background-image: linear-gradient(to top right, rgb(3, 226, 211), rgb(3, 87, 243), rgb(164, 19, 226))
+
 }
 .inspan{
   text-align: left !important;
   font-family: sans-serif;
   text-transform: capitalize;
+  margin-top: 4%;
+}
+.input{
+  width: 75%;
+  height: 40px;
+  outline: none;
+}
+.btnlo{
+  width: 40%;
+  height: 2.5rem;
+  float: center;
+  background-color: red;
+  margin-top: 5%;
+  color: white;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+.btnlo:hover{
+  background-color: pink;
+  color: black;
+  outline: none;
 }
 .section_padding{
   padding: 4rem 4rem;
