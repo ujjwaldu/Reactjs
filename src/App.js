@@ -20,7 +20,7 @@ export default function App() {
   return(
     
      <div>
-     <Navbarb/><div>kumar</div>
+     <Navbarb/>
      <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='about' element={<About/>} />
