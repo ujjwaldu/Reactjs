@@ -2,8 +2,6 @@ import { useState } from 'react'  //12th vdo of rajiv sir and to replace api giv
 import axios from 'axios'
 export default function Login() {
     const [state, setstate] = useState({
-        name:'',
-        username:'',
         email:'',
         password:''
     })
@@ -15,7 +13,7 @@ export default function Login() {
 
     const savedata=(event)=>{
         event.preventDefault();
-        axios.post('https://www.haveinlist.com/api/register.php',state) 
+        axios.post('http://35.154.52.249:5050/user/login',state) 
         .then((res)=>{
             console.log(res);
             setmsg('data sent')
@@ -31,12 +29,7 @@ export default function Login() {
                     login form
                 </div>
             </div>
-                <div className="row">
-                    <div className="col-md-12 inspan">
-                        <span className=''>Name</span>
-                        <div><input className='input' onChange={hanldler} type="text" placeholder='Write your name' name='name' /></div>
-                    </div>
-                </div>
+                
                 {/* <div className="row">
                     <div className="col-md-12 inspan">
                         <span className=''>username</span>

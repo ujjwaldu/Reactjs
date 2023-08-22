@@ -38,7 +38,7 @@ export default function Register() {
             <form className='outbox'  onSubmit={savedata}>
             <div className="row">
                 <div className="col-md-12 login">
-                    login form
+                    Registration form
                 </div>
             </div>
                 <div className="row">
